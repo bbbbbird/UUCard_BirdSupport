@@ -30,6 +30,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //假資料區
     FamilySellObject *data = [FamilySellObject new];
     data.actionDesc = @"活動期間持悠遊卡於全家超商小額消費, 累積扣款滿500元即可領取序號一組,可 至全家Famiport兌換好禮。";
     data.actionProcess = @"您目前累積消費金額為600元,您目前已 領取0份序號,還可領取0份序號,本活 動尚有3202份好禮可領取";
@@ -40,6 +41,7 @@
     data.exchangeStart = @"2014/9/20/20:00";
     data.exchangeEnd = @"2014/9/30/20:00";
     data.isSerialAccord = YES;
+    data.isPointAccord = YES;
     BBFamilyGiftViewController *vc = (BBFamilyGiftViewController*)segue.destinationViewController;
     vc.dataObject = data;
 }

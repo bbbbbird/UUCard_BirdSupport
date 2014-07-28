@@ -5,7 +5,7 @@
 //  Created by Bird on 2014/7/25.
 //  Copyright (c) 2014年 iOSTeam. All rights reserved.
 //
-#define CELL_ID_ARRAY @[ @"FamilyTitle", @"SpeerateLine", @"ActivityTitle", @"ActivityContent", @"ActivityBtn", @"ActivityDescriptionTitle", @"ActivityDescriptionContent", @"ActivityDurationTitle", @"ActivityDurationContent", @"ExchangeTimeTitle" ,@"ExchangeTimeContent" , @"ExchangeMethodTitle", @"ExchangeMethodContent", @"URLTitle", @"URLContent" ]
+#define CELL_ID_ARRAY @[ @"FamilyTitle", @"SpeerateLine", @"ActivityTitle", @"ActivityContent",@"gap10",@"gap10", @"ActivityBtn", @"ActivityDescriptionTitle", @"ActivityDescriptionContent", @"ActivityDurationTitle", @"ActivityDurationContent", @"ExchangeTimeTitle" ,@"ExchangeTimeContent" , @"ExchangeMethodTitle", @"ExchangeMethodContent", @"URLTitle", @"URLContent" ]
 #import "BBFamilyGiftViewController.h"
 #import "FamilyCollectionCell.h"
 @interface BBFamilyGiftViewController ()
@@ -41,8 +41,8 @@
     //依據物件，建立cell id array
     if (_dataObject.isSerialAccord) {//符合條件
         cellIDs = CELL_ID_ARRAY;
-    }else{
-        cellIDs = [NSArray arrayWithObjects:CELL_ID_ARRAY[0], CELL_ID_ARRAY[1], CELL_ID_ARRAY[2], CELL_ID_ARRAY[3],CELL_ID_ARRAY[5], CELL_ID_ARRAY[6],CELL_ID_ARRAY[7], CELL_ID_ARRAY[8],CELL_ID_ARRAY[CELL_ID_ARRAY.count - 2], CELL_ID_ARRAY[CELL_ID_ARRAY.count - 1], nil];
+    }else{//不符合條件
+        cellIDs = [NSArray arrayWithObjects:CELL_ID_ARRAY[0], CELL_ID_ARRAY[1], CELL_ID_ARRAY[2], CELL_ID_ARRAY[3],CELL_ID_ARRAY[7], CELL_ID_ARRAY[8],CELL_ID_ARRAY[9], CELL_ID_ARRAY[10],CELL_ID_ARRAY[CELL_ID_ARRAY.count - 2], CELL_ID_ARRAY[CELL_ID_ARRAY.count - 1], nil];
     }
     [m_collectionView reloadData];
 }

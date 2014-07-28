@@ -8,15 +8,18 @@
 
 #import "FamilyCollectionCell.h"
 #import "UILabel+makeNumberDifferenceColor.h"
+#import "BBStickerBook.h"
 @interface FamilyCollectionCell(){
     
     __weak IBOutlet UILabel *processDescription;
     __weak IBOutlet UILabel *contentDescription;
     __weak IBOutlet UILabel *durationDescription;
     __weak IBOutlet UILabel *exchangeMethodDescription;
+    __weak IBOutlet UILabel *updateDate;
     __weak IBOutlet UILabel *exchangeDuration;
     __weak IBOutlet UILabel *webUrlDescription;
     UITapGestureRecognizer *tapGesture;
+    __weak IBOutlet BBStickerBook *stickerBook;
 }
 @end
 @implementation FamilyCollectionCell
@@ -39,6 +42,11 @@
     if ([identifer isEqualToString:@"FamilyTitle"]) {
     }else if ([identifer isEqualToString:@"SpeerateLine"]){
     }else if ([identifer isEqualToString:@"ActivityTitle"]){
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"YYYY年MM月dd號"];
+        //更新日期 - 取前一天
+        NSString *dateString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:-24 * 60 * 60]];
+        [updateDate setText:dateString];
     }else if ([identifer isEqualToString:@"ActivityContent"]){
         [processDescription setText:data.actionProcess withNumberColor:[UIColor colorWithRed:255.0/255.0 green:247.0/255.0 blue:153.0/255.0 alpha:1.0]];
     }else if ([identifer isEqualToString:@"ActivityDescriptionContent"]){
@@ -59,41 +67,50 @@
     }else if ([identifer isEqualToString:@"ExchangeTimeContent"]){
         NSString *exchangeDurationString = [NSString stringWithFormat:@"%@ 至 \n%@",data.exchangeStart,data.exchangeEnd];
         [exchangeDuration setText:exchangeDurationString];
+    }//以下為貼紙頁面
+    else if ([identifer isEqualToString:@"stickers"]){
+        [stickerBook initStickerBook];
+        [stickerBook pasteStickersWithNumber:data.pointQrt];
     }
 }
 + (CGSize)getCellSizeFromIdentifer:(NSString *)identifer andData:(FamilySellObject*)data{
     if ([identifer isEqualToString:@"FamilyTitle"]) {
-        return CGSizeMake(288, 50);
+        return CGSizeMake(288, 46);
+    }else if ([identifer isEqualToString:@"gap10"]){
+        return CGSizeMake(288, 10);
     }else if ([identifer isEqualToString:@"SpeerateLine"]){
         return CGSizeMake(288, 21);
     }else if ([identifer isEqualToString:@"ActivityTitle"]){
-        return CGSizeMake(288, 36);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"ActivityContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.actionProcess containerWidth:288 andTextSize:20 addHeight:10];
     }else if ([identifer isEqualToString:@"ActivityBtn"]){
-        return CGSizeMake(170, 50);
+        return CGSizeMake(170, 30);
     }else if ([identifer isEqualToString:@"ActivityDescriptionTitle"]){
-        return CGSizeMake(288, 56);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"ActivityDescriptionContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.actionDesc containerWidth:288 andTextSize:20 addHeight:10];
     }else if ([identifer isEqualToString:@"ActivityDurationTitle"]){
-        return CGSizeMake(288, 56);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"ActivityDurationContent"]){
         NSString *activityDuration = [NSString stringWithFormat:@"%@ 至 \n%@",data.actionStart,data.actionEnd];
         return [FamilyCollectionCell SizeForCellWithString:activityDuration containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ExchangeMethodTitle"]){
-        return CGSizeMake(288, 56);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"ExchangeMethodContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.exchangeMethod containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"URLTitle"]){
-        return CGSizeMake(288, 56);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"URLContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.website containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ExchangeTimeTitle"]){
-        return CGSizeMake(288, 56);
+        return CGSizeMake(288, 46);
     }else if ([identifer isEqualToString:@"ExchangeTimeContent"]){
         NSString *activityDuration = [NSString stringWithFormat:@"%@ 至 \n%@",data.exchangeStart,data.exchangeEnd];
         return [FamilyCollectionCell SizeForCellWithString:activityDuration containerWidth:288 andTextSize:20 addHeight:0];
+    }//以下為貼紙頁面
+    else if ([identifer isEqualToString:@"stickers"]){
+        return CGSizeMake(288, 226);
     }
     return CGSizeMake(0, 0);
 }

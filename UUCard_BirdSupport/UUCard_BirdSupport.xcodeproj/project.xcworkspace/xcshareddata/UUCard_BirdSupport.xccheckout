@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FB906143-E047-4EE4-BA16-B21AF2B16A99</string>
+	<string>41C25C12-9B01-452D-8B81-908905424807</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UUCard_BirdSupport</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>451EE36F-30BF-4F76-88DF-6761B9BAE798</key>
-		<string>https://github.com/bbbbbird/UUCard.git</string>
+		<key>4AA670A9-38B2-41EA-B370-D6F45458518B</key>
+		<string>https://github.com/bbbbbird/UUCard_BirdSupport.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UUCard_BirdSupport/UUCard_BirdSupport.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>451EE36F-30BF-4F76-88DF-6761B9BAE798</key>
+		<key>4AA670A9-38B2-41EA-B370-D6F45458518B</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/bbbbbird/UUCard.git</string>
+	<string>https://github.com/bbbbbird/UUCard_BirdSupport.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>451EE36F-30BF-4F76-88DF-6761B9BAE798</string>
+	<string>4AA670A9-38B2-41EA-B370-D6F45458518B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>451EE36F-30BF-4F76-88DF-6761B9BAE798</string>
+			<string>4AA670A9-38B2-41EA-B370-D6F45458518B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>UUCard</string>
+			<string>UUCard_BirdSupport</string>
 		</dict>
 	</array>
 </dict>
