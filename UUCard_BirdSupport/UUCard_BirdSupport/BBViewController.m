@@ -40,8 +40,8 @@
     data.website = @"活動詳細說明WEB LINK";
     data.exchangeStart = @"2014/9/20/20:00";
     data.exchangeEnd = @"2014/9/30/20:00";
-    data.isSerialAccord = YES;
-    data.isPointAccord = YES;
+    data.isSerialAccord = NO;
+    data.isPointAccord = NO;
     BBFamilyGiftViewController *vc = (BBFamilyGiftViewController*)segue.destinationViewController;
     vc.dataObject = data;
 }

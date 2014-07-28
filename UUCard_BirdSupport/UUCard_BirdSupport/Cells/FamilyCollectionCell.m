@@ -35,6 +35,12 @@
 - (IBAction)getOrSearchBtnClicked:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"getOrSearchBtnClicked" object:nil userInfo:nil];
 }
+- (IBAction)uperBtnClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"uperBtnClicked" object:nil userInfo:nil];
+}
+- (IBAction)lowerBtnClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"lowerBtnClicked" object:nil userInfo:nil];
+}
 - (void)urlTaped{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"URL_TAPED" object:nil userInfo:nil];
 }
@@ -75,42 +81,48 @@
 }
 + (CGSize)getCellSizeFromIdentifer:(NSString *)identifer andData:(FamilySellObject*)data{
     if ([identifer isEqualToString:@"FamilyTitle"]) {
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 50);
     }else if ([identifer isEqualToString:@"gap10"]){
         return CGSizeMake(288, 10);
     }else if ([identifer isEqualToString:@"SpeerateLine"]){
         return CGSizeMake(288, 21);
     }else if ([identifer isEqualToString:@"ActivityTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"ActivityContent"]){
-        return [FamilyCollectionCell SizeForCellWithString:data.actionProcess containerWidth:288 andTextSize:20 addHeight:10];
+        return [FamilyCollectionCell SizeForCellWithString:data.actionProcess containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ActivityBtn"]){
         return CGSizeMake(170, 30);
     }else if ([identifer isEqualToString:@"ActivityDescriptionTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"ActivityDescriptionContent"]){
-        return [FamilyCollectionCell SizeForCellWithString:data.actionDesc containerWidth:288 andTextSize:20 addHeight:10];
+        return [FamilyCollectionCell SizeForCellWithString:data.actionDesc containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ActivityDurationTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"ActivityDurationContent"]){
         NSString *activityDuration = [NSString stringWithFormat:@"%@ 至 \n%@",data.actionStart,data.actionEnd];
         return [FamilyCollectionCell SizeForCellWithString:activityDuration containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ExchangeMethodTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"ExchangeMethodContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.exchangeMethod containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"URLTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"URLContent"]){
         return [FamilyCollectionCell SizeForCellWithString:data.website containerWidth:288 andTextSize:20 addHeight:0];
     }else if ([identifer isEqualToString:@"ExchangeTimeTitle"]){
-        return CGSizeMake(288, 46);
+        return CGSizeMake(288, 26);
     }else if ([identifer isEqualToString:@"ExchangeTimeContent"]){
         NSString *activityDuration = [NSString stringWithFormat:@"%@ 至 \n%@",data.exchangeStart,data.exchangeEnd];
         return [FamilyCollectionCell SizeForCellWithString:activityDuration containerWidth:288 andTextSize:20 addHeight:0];
     }//以下為貼紙頁面
     else if ([identifer isEqualToString:@"stickers"]){
-        return CGSizeMake(288, 226);
+        return CGSizeMake(288, 216);
+    }
+    else if ([identifer isEqualToString:@"uperBtn"]){
+        return CGSizeMake(288, 30);
+    }
+    else if ([identifer isEqualToString:@"lowerBtn"]){
+        return CGSizeMake(288, 30);
     }
     return CGSizeMake(0, 0);
 }

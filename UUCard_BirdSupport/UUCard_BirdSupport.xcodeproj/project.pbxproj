@@ -22,6 +22,7 @@
 		044132A3197FAD4900376039 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044132A1197FAD4900376039 /* InfoPlist.strings */; };
 		044132A5197FAD4900376039 /* UUCard_BirdSupportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 044132A4197FAD4900376039 /* UUCard_BirdSupportTests.m */; };
 		044132C4197FAE7A00376039 /* FamilySellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 044132C3197FAE7A00376039 /* FamilySellObject.m */; };
+		0477E86319868C070048D9E8 /* FamilyCell_List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477E86219868C070048D9E8 /* FamilyCell_List.plist */; };
 		451FA13519822FC8003BBBAE /* FamilyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */; };
 		451FA1381982593D003BBBAE /* UILabel+makeNumberDifferenceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 451FA1371982593D003BBBAE /* UILabel+makeNumberDifferenceColor.m */; };
 		45B3C5D319866ADB00D3519A /* BBFamilyStickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C5D219866ADB00D3519A /* BBFamilyStickerViewController.m */; };
@@ -91,6 +92,7 @@
 		044132A4197FAD4900376039 /* UUCard_BirdSupportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCard_BirdSupportTests.m; sourceTree = "<group>"; };
 		044132C2197FAE7A00376039 /* FamilySellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilySellObject.h; sourceTree = "<group>"; };
 		044132C3197FAE7A00376039 /* FamilySellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilySellObject.m; sourceTree = "<group>"; };
+		0477E86219868C070048D9E8 /* FamilyCell_List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FamilyCell_List.plist; sourceTree = "<group>"; };
 		451FA13319822FC8003BBBAE /* FamilyCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FamilyCollectionCell.h; path = UUCard_BirdSupport/Cells/FamilyCollectionCell.h; sourceTree = "<group>"; };
 		451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FamilyCollectionCell.m; path = UUCard_BirdSupport/Cells/FamilyCollectionCell.m; sourceTree = "<group>"; };
 		451FA1361982593D003BBBAE /* UILabel+makeNumberDifferenceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+makeNumberDifferenceColor.h"; path = "UUCard_BirdSupport/Cells/UILabel+makeNumberDifferenceColor.h"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		0441326D197FAD4900376039 = {
 			isa = PBXGroup;
 			children = (
+				0477E86219868C070048D9E8 /* FamilyCell_List.plist */,
 				45B3C5D71986741000D3519A /* mdpi_stickers01.png */,
 				45B3C5D81986741000D3519A /* mdpi_stickers02.png */,
 				45B3C5D91986741000D3519A /* mdpi_stickers03.png */,
@@ -385,6 +388,7 @@
 				45B3C60E1986741000D3519A /* mdpi_stickers26.png in Resources */,
 				45B3C6011986741000D3519A /* mdpi_stickers13.png in Resources */,
 				45B3C5FA1986741000D3519A /* mdpi_stickers06.png in Resources */,
+				0477E86319868C070048D9E8 /* FamilyCell_List.plist in Resources */,
 				45B3C5FC1986741000D3519A /* mdpi_stickers08.png in Resources */,
 				04413284197FAD4900376039 /* InfoPlist.strings in Resources */,
 				45B3C60D1986741000D3519A /* mdpi_stickers25.png in Resources */,

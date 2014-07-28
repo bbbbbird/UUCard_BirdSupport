@@ -10,4 +10,5 @@
 #import "FamilySellObject.h"
 @interface BBFamilyStickerViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic,strong) FamilySellObject *dataObject;
+@property (nonatomic,strong)UIImage *bgImage;
 @end

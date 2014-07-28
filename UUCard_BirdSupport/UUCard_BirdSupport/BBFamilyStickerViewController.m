@@ -5,12 +5,14 @@
 //  Created by Bird on 2014/7/28.
 //  Copyright (c) 2014年 iOSTeam. All rights reserved.
 //
-#define CELL_ID_ARRAY @[ @"FamilyTitle", @"SpeerateLine", @"ActivityTitle", @"ActivityContent",@"stickers" , @"gap10",@"ActivityBtn",@"gap10",@"gap10",@"ActivityBtn", @"ActivityDescriptionTitle", @"ActivityDescriptionContent", @"ActivityDurationTitle", @"ActivityDurationContent", @"ExchangeTimeTitle" ,@"ExchangeTimeContent" , @"ExchangeMethodTitle", @"ExchangeMethodContent", @"URLTitle", @"URLContent" ]
+
 #import "BBFamilyStickerViewController.h"
 #import "FamilyCollectionCell.h"
 @interface BBFamilyStickerViewController ()
 {
     NSArray *cellIDs;
+    __weak IBOutlet UICollectionView *m_collectionView;
+    __weak IBOutlet UIImageView *bgImageView;
 }
 @end
 
@@ -28,12 +30,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if (_dataObject.isPointAccord) {//符合貼紙條件
-         cellIDs = CELL_ID_ARRAY;
-    }else{
-        cellIDs = [NSArray arrayWithObjects:CELL_ID_ARRAY[0], CELL_ID_ARRAY[1], CELL_ID_ARRAY[2], CELL_ID_ARRAY[3],CELL_ID_ARRAY[10], CELL_ID_ARRAY[11],CELL_ID_ARRAY[12], CELL_ID_ARRAY[13],CELL_ID_ARRAY[CELL_ID_ARRAY.count - 2], CELL_ID_ARRAY[CELL_ID_ARRAY.count - 1], nil];
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uperBtnClicked) name:@"uperBtnClicked" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(lowerBtnClicked) name:@"lowerBtnClicked" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenURLClicked) name:@"URL_TAPED" object:nil];
+    
+    //設定背景圖
+    if (bgImageView && _bgImage) {
+        [bgImageView setImage:_bgImage];
     }
     
+    //依據物件，建立cell id array
+    NSString *finalPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"FamilyCell_List.plist"];
+    NSDictionary *cellDic = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+    
+    if (_dataObject.isPointAccord) {//符合貼紙條件
+        cellIDs = [cellDic objectForKey:@"stickerViewType0"];
+    }else{
+        cellIDs = [cellDic objectForKey:@"stickerViewType1"];
+    }
+    
+    [m_collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +59,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"uperBtnClicked" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"lowerBtnClicked" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"URL_TAPED" object:nil];
+}
 - (BOOL)prefersStatusBarHidden{
     return YES;
+}
+#pragma mark - button actions
+- (void)uperBtnClicked{
+    NSLog(@"uper button clicked");
+}
+- (void)lowerBtnClicked{
+    NSLog(@"lower button clicked");
+}
+- (void)whenURLClicked{
+    NSLog(@"url button clicked");
 }
 #pragma mark - collection view
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
