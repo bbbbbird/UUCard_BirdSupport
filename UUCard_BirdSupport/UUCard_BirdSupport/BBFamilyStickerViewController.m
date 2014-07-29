@@ -8,6 +8,7 @@
 
 #import "BBFamilyStickerViewController.h"
 #import "FamilyCollectionCell.h"
+#import "BBFakeAlertView.h"
 @interface BBFamilyStickerViewController ()
 {
     NSArray *cellIDs;
@@ -73,6 +74,9 @@
 }
 - (void)lowerBtnClicked{
     NSLog(@"lower button clicked");
+    BBFakeAlertView *alert = [[BBFakeAlertView alloc] initWithNibName:@"GiveStickerDialog"];
+    [self.view addSubview:alert];
+    [alert show];
 }
 - (void)whenURLClicked{
     NSLog(@"url button clicked");

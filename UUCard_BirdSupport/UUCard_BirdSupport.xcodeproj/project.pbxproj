@@ -23,6 +23,8 @@
 		044132A5197FAD4900376039 /* UUCard_BirdSupportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 044132A4197FAD4900376039 /* UUCard_BirdSupportTests.m */; };
 		044132C4197FAE7A00376039 /* FamilySellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 044132C3197FAE7A00376039 /* FamilySellObject.m */; };
 		0477E86319868C070048D9E8 /* FamilyCell_List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0477E86219868C070048D9E8 /* FamilyCell_List.plist */; };
+		0477E8661987250D0048D9E8 /* BBFakeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477E8651987250D0048D9E8 /* BBFakeAlertView.m */; };
+		0477E868198727BC0048D9E8 /* GiveStickerDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0477E867198727BC0048D9E8 /* GiveStickerDialog.xib */; };
 		451FA13519822FC8003BBBAE /* FamilyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */; };
 		451FA1381982593D003BBBAE /* UILabel+makeNumberDifferenceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 451FA1371982593D003BBBAE /* UILabel+makeNumberDifferenceColor.m */; };
 		45B3C5D319866ADB00D3519A /* BBFamilyStickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C5D219866ADB00D3519A /* BBFamilyStickerViewController.m */; };
@@ -93,6 +95,9 @@
 		044132C2197FAE7A00376039 /* FamilySellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamilySellObject.h; sourceTree = "<group>"; };
 		044132C3197FAE7A00376039 /* FamilySellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamilySellObject.m; sourceTree = "<group>"; };
 		0477E86219868C070048D9E8 /* FamilyCell_List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FamilyCell_List.plist; sourceTree = "<group>"; };
+		0477E8641987250D0048D9E8 /* BBFakeAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFakeAlertView.h; sourceTree = "<group>"; };
+		0477E8651987250D0048D9E8 /* BBFakeAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFakeAlertView.m; sourceTree = "<group>"; };
+		0477E867198727BC0048D9E8 /* GiveStickerDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiveStickerDialog.xib; sourceTree = "<group>"; };
 		451FA13319822FC8003BBBAE /* FamilyCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FamilyCollectionCell.h; path = UUCard_BirdSupport/Cells/FamilyCollectionCell.h; sourceTree = "<group>"; };
 		451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FamilyCollectionCell.m; path = UUCard_BirdSupport/Cells/FamilyCollectionCell.m; sourceTree = "<group>"; };
 		451FA1361982593D003BBBAE /* UILabel+makeNumberDifferenceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+makeNumberDifferenceColor.h"; path = "UUCard_BirdSupport/Cells/UILabel+makeNumberDifferenceColor.h"; sourceTree = "<group>"; };
@@ -162,37 +167,7 @@
 		0441326D197FAD4900376039 = {
 			isa = PBXGroup;
 			children = (
-				0477E86219868C070048D9E8 /* FamilyCell_List.plist */,
-				45B3C5D71986741000D3519A /* mdpi_stickers01.png */,
-				45B3C5D81986741000D3519A /* mdpi_stickers02.png */,
-				45B3C5D91986741000D3519A /* mdpi_stickers03.png */,
-				45B3C5DA1986741000D3519A /* mdpi_stickers04.png */,
-				45B3C5DB1986741000D3519A /* mdpi_stickers05.png */,
-				45B3C5DC1986741000D3519A /* mdpi_stickers06.png */,
-				45B3C5DD1986741000D3519A /* mdpi_stickers07.png */,
-				45B3C5DE1986741000D3519A /* mdpi_stickers08.png */,
-				45B3C5DF1986741000D3519A /* mdpi_stickers09.png */,
-				45B3C5E01986741000D3519A /* mdpi_stickers10.png */,
-				45B3C5E11986741000D3519A /* mdpi_stickers11.png */,
-				45B3C5E21986741000D3519A /* mdpi_stickers12.png */,
-				45B3C5E31986741000D3519A /* mdpi_stickers13.png */,
-				45B3C5E41986741000D3519A /* mdpi_stickers14.png */,
-				45B3C5E51986741000D3519A /* mdpi_stickers15.png */,
-				45B3C5E61986741000D3519A /* mdpi_stickers16.png */,
-				45B3C5E71986741000D3519A /* mdpi_stickers17.png */,
-				45B3C5E81986741000D3519A /* mdpi_stickers18.png */,
-				45B3C5E91986741000D3519A /* mdpi_stickers19.png */,
-				45B3C5EA1986741000D3519A /* mdpi_stickers20.png */,
-				45B3C5EB1986741000D3519A /* mdpi_stickers21.png */,
-				45B3C5EC1986741000D3519A /* mdpi_stickers22.png */,
-				45B3C5ED1986741000D3519A /* mdpi_stickers23.png */,
-				45B3C5EE1986741000D3519A /* mdpi_stickers24.png */,
-				45B3C5EF1986741000D3519A /* mdpi_stickers25.png */,
-				45B3C5F01986741000D3519A /* mdpi_stickers26.png */,
-				45B3C5F11986741000D3519A /* mdpi_stickers27.png */,
-				45B3C5F21986741000D3519A /* mdpi_stickers28.png */,
-				45B3C5F31986741000D3519A /* mdpi_stickers29.png */,
-				45B3C5F41986741000D3519A /* mdpi_stickers30.png */,
+				0477E869198727CB0048D9E8 /* graphics */,
 				451FA13219822F8B003BBBAE /* FamilyCollectionViewCells */,
 				0441327F197FAD4900376039 /* UUCard_BirdSupport */,
 				0441329E197FAD4900376039 /* UUCard_BirdSupportTests */,
@@ -270,15 +245,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0477E869198727CB0048D9E8 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				45B3C5D71986741000D3519A /* mdpi_stickers01.png */,
+				45B3C5D81986741000D3519A /* mdpi_stickers02.png */,
+				45B3C5D91986741000D3519A /* mdpi_stickers03.png */,
+				45B3C5DA1986741000D3519A /* mdpi_stickers04.png */,
+				45B3C5DB1986741000D3519A /* mdpi_stickers05.png */,
+				45B3C5DC1986741000D3519A /* mdpi_stickers06.png */,
+				45B3C5DD1986741000D3519A /* mdpi_stickers07.png */,
+				45B3C5DE1986741000D3519A /* mdpi_stickers08.png */,
+				45B3C5DF1986741000D3519A /* mdpi_stickers09.png */,
+				45B3C5E01986741000D3519A /* mdpi_stickers10.png */,
+				45B3C5E11986741000D3519A /* mdpi_stickers11.png */,
+				45B3C5E21986741000D3519A /* mdpi_stickers12.png */,
+				45B3C5E31986741000D3519A /* mdpi_stickers13.png */,
+				45B3C5E41986741000D3519A /* mdpi_stickers14.png */,
+				45B3C5E51986741000D3519A /* mdpi_stickers15.png */,
+				45B3C5E61986741000D3519A /* mdpi_stickers16.png */,
+				45B3C5E71986741000D3519A /* mdpi_stickers17.png */,
+				45B3C5E81986741000D3519A /* mdpi_stickers18.png */,
+				45B3C5E91986741000D3519A /* mdpi_stickers19.png */,
+				45B3C5EA1986741000D3519A /* mdpi_stickers20.png */,
+				45B3C5EB1986741000D3519A /* mdpi_stickers21.png */,
+				45B3C5EC1986741000D3519A /* mdpi_stickers22.png */,
+				45B3C5ED1986741000D3519A /* mdpi_stickers23.png */,
+				45B3C5EE1986741000D3519A /* mdpi_stickers24.png */,
+				45B3C5EF1986741000D3519A /* mdpi_stickers25.png */,
+				45B3C5F01986741000D3519A /* mdpi_stickers26.png */,
+				45B3C5F11986741000D3519A /* mdpi_stickers27.png */,
+				45B3C5F21986741000D3519A /* mdpi_stickers28.png */,
+				45B3C5F31986741000D3519A /* mdpi_stickers29.png */,
+				45B3C5F41986741000D3519A /* mdpi_stickers30.png */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
 		451FA13219822F8B003BBBAE /* FamilyCollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				0477E867198727BC0048D9E8 /* GiveStickerDialog.xib */,
+				0477E86219868C070048D9E8 /* FamilyCell_List.plist */,
 				451FA13319822FC8003BBBAE /* FamilyCollectionCell.h */,
 				451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */,
 				451FA1361982593D003BBBAE /* UILabel+makeNumberDifferenceColor.h */,
 				451FA1371982593D003BBBAE /* UILabel+makeNumberDifferenceColor.m */,
 				45B3C5D4198670B700D3519A /* BBStickerBook.h */,
 				45B3C5D5198670B700D3519A /* BBStickerBook.m */,
+				0477E8641987250D0048D9E8 /* BBFakeAlertView.h */,
+				0477E8651987250D0048D9E8 /* BBFakeAlertView.m */,
 			);
 			name = FamilyCollectionViewCells;
 			sourceTree = "<group>";
@@ -366,6 +382,7 @@
 				45B3C5FB1986741000D3519A /* mdpi_stickers07.png in Resources */,
 				45B3C6071986741000D3519A /* mdpi_stickers19.png in Resources */,
 				45B3C5F71986741000D3519A /* mdpi_stickers03.png in Resources */,
+				0477E868198727BC0048D9E8 /* GiveStickerDialog.xib in Resources */,
 				45B3C6051986741000D3519A /* mdpi_stickers17.png in Resources */,
 				45B3C60F1986741000D3519A /* mdpi_stickers27.png in Resources */,
 				45B3C6101986741000D3519A /* mdpi_stickers28.png in Resources */,
@@ -418,6 +435,7 @@
 				044132C4197FAE7A00376039 /* FamilySellObject.m in Sources */,
 				45B3C5D319866ADB00D3519A /* BBFamilyStickerViewController.m in Sources */,
 				45B3C5D6198670B700D3519A /* BBStickerBook.m in Sources */,
+				0477E8661987250D0048D9E8 /* BBFakeAlertView.m in Sources */,
 				45E6B9331982066700AB5C9E /* BBFamilyGiftViewController.m in Sources */,
 				04413286197FAD4900376039 /* main.m in Sources */,
 				451FA13519822FC8003BBBAE /* FamilyCollectionCell.m in Sources */,
