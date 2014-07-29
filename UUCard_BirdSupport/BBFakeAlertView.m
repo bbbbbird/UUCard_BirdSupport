@@ -10,6 +10,7 @@
 #define CORNER_DADIOUS 5
 #import "BBFakeAlertView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "GiveStickerDialog.h"
 @interface BBFakeAlertView ()
 {
     
@@ -37,6 +38,10 @@
     //load layout
     if (targetNib) {
         UIView *targetNibView = [[[NSBundle mainBundle] loadNibNamed:targetNib owner:self options:nil] objectAtIndex:0];
+        if ([targetNibView isKindOfClass:NSClassFromString(@"GiveStickerDialog")]) {
+            targetNibView = (GiveStickerDialog*)targetNibView;
+            [targetNibView performSelector:@selector(initAlert)];
+        }
         [self makeCorner:targetNibView];
         [self addSubview:targetNibView];
         [targetNibView setCenter:self.center];
@@ -51,7 +56,7 @@
         self.alpha = 1.0f;
     }];
 }
-- (void)hide{
+- (void)dismiss{
     [UIView animateWithDuration:SHOW_HIDE_ANIMATION_DURATION animations:^{
         self.alpha = 0.0f;
     } completion:^(BOOL complete){
@@ -61,5 +66,25 @@
 - (void)makeCorner:(UIView *)targetView{
     targetView.layer.cornerRadius = 5;
     targetView.layer.masksToBounds = YES;
+}
+- (void)setTargetSendStickerNumber:(NSString *)value{
+    GiveStickerDialog *view = [self findGiveStickerView];
+    if (view) {
+        [view setTargetSendStickerNumber:value];
+    }
+}
+- (void)setTargetSendStickerTarget:(NSString *)value{
+    GiveStickerDialog *view = [self findGiveStickerView];
+    if (view) {
+        [view setTargetSendStickerTarget:value];
+    }
+}
+- (GiveStickerDialog*)findGiveStickerView{
+    for (GiveStickerDialog *view in self.subviews) {
+        if ([view isKindOfClass:NSClassFromString(@"GiveStickerDialog")]) {
+            return view;
+        }
+    }
+    return nil;
 }
 @end

@@ -59,6 +59,7 @@
 		45B3C6101986741000D3519A /* mdpi_stickers28.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B3C5F21986741000D3519A /* mdpi_stickers28.png */; };
 		45B3C6111986741000D3519A /* mdpi_stickers29.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B3C5F31986741000D3519A /* mdpi_stickers29.png */; };
 		45B3C6121986741000D3519A /* mdpi_stickers30.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B3C5F41986741000D3519A /* mdpi_stickers30.png */; };
+		45B3C615198735CA00D3519A /* GiveStickerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B3C614198735CA00D3519A /* GiveStickerDialog.m */; };
 		45E6B9331982066700AB5C9E /* BBFamilyGiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E6B9321982066700AB5C9E /* BBFamilyGiftViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,8 @@
 		45B3C5F21986741000D3519A /* mdpi_stickers28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mdpi_stickers28.png; sourceTree = "<group>"; };
 		45B3C5F31986741000D3519A /* mdpi_stickers29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mdpi_stickers29.png; sourceTree = "<group>"; };
 		45B3C5F41986741000D3519A /* mdpi_stickers30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mdpi_stickers30.png; sourceTree = "<group>"; };
+		45B3C613198735CA00D3519A /* GiveStickerDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiveStickerDialog.h; sourceTree = "<group>"; };
+		45B3C614198735CA00D3519A /* GiveStickerDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiveStickerDialog.m; sourceTree = "<group>"; };
 		45E6B9311982066700AB5C9E /* BBFamilyGiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBFamilyGiftViewController.h; path = ../BBFamilyGiftViewController.h; sourceTree = "<group>"; };
 		45E6B9321982066700AB5C9E /* BBFamilyGiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBFamilyGiftViewController.m; path = ../BBFamilyGiftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +170,7 @@
 		0441326D197FAD4900376039 = {
 			isa = PBXGroup;
 			children = (
+				45B3C616198735D300D3519A /* customViews */,
 				0477E869198727CB0048D9E8 /* graphics */,
 				451FA13219822F8B003BBBAE /* FamilyCollectionViewCells */,
 				0441327F197FAD4900376039 /* UUCard_BirdSupport */,
@@ -285,7 +289,6 @@
 		451FA13219822F8B003BBBAE /* FamilyCollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				0477E867198727BC0048D9E8 /* GiveStickerDialog.xib */,
 				0477E86219868C070048D9E8 /* FamilyCell_List.plist */,
 				451FA13319822FC8003BBBAE /* FamilyCollectionCell.h */,
 				451FA13419822FC8003BBBAE /* FamilyCollectionCell.m */,
@@ -297,6 +300,16 @@
 				0477E8651987250D0048D9E8 /* BBFakeAlertView.m */,
 			);
 			name = FamilyCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		45B3C616198735D300D3519A /* customViews */ = {
+			isa = PBXGroup;
+			children = (
+				45B3C613198735CA00D3519A /* GiveStickerDialog.h */,
+				45B3C614198735CA00D3519A /* GiveStickerDialog.m */,
+				0477E867198727BC0048D9E8 /* GiveStickerDialog.xib */,
+			);
+			name = customViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +449,7 @@
 				45B3C5D319866ADB00D3519A /* BBFamilyStickerViewController.m in Sources */,
 				45B3C5D6198670B700D3519A /* BBStickerBook.m in Sources */,
 				0477E8661987250D0048D9E8 /* BBFakeAlertView.m in Sources */,
+				45B3C615198735CA00D3519A /* GiveStickerDialog.m in Sources */,
 				45E6B9331982066700AB5C9E /* BBFamilyGiftViewController.m in Sources */,
 				04413286197FAD4900376039 /* main.m in Sources */,
 				451FA13519822FC8003BBBAE /* FamilyCollectionCell.m in Sources */,

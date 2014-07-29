@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FamilySellObject.h"
-@interface BBFamilyStickerViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface BBFamilyStickerViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,strong) FamilySellObject *dataObject;
 @property (nonatomic,strong)UIImage *bgImage;
 @end
